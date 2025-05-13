@@ -1,0 +1,17 @@
+# Python Version
+
+python>=3.10
+
+# Core Libraries
+
+numpy>=1.24.0
+pandas>=1.5.0
+scikit-learn>=1.2.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+nltk>=3.8.0
+
+# NLTK Resource Setup (Required)
+
+nltk.download('punkt')
+nltk.download('stopwords')
