@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spam Email Detection using Machine Learning">
+    <title>Spam Email Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>?? Spam Email Detection</h1>
+        <form method="POST">
+            <textarea name="email_text" placeholder="Enter your email here..." required>{{ email_text | default('') }}</textarea>
+            <button type="submit">Detect Spam</button>
+        </form>
+        
+        {% if prediction %}
+            <div class="result">
+                <h2>Prediction: {{ prediction }}</h2>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
